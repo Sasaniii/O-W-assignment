@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import NavBar from './Components/ViewItem/NavBar';
+import Item from './Components/ImageDisplay/Item';
+import ChooseItemContainer from './Components/ViewItem/ChooseItem/ChooseItemContainer';
 import './App.css';
+import AboutFrameDes from './Components/AboutFrame/AboutFrameDes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App w-screen">
+      {/* <header className="App-header">
+       
+      </header> */}
+     
+      <NavBar />
+      <div className='flex items-start'>
+      <Item /><ChooseItemContainer/>
+</div>
+<AboutFrameDes />
     </div>
   );
 }
